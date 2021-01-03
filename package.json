@@ -11,8 +11,11 @@
   "dependencies": {
     "@nuxt/content": "^1.9.0",
     "@nuxtjs/pwa": "^3.0.2",
+    "@tailwindcss/typography": "^0.3.1",
     "core-js": "^3.6.5",
+    "frontmatter-markdown-loader": "^3.6.2",
     "nuxt": "^2.14.6",
+    "prism-themes": "^1.5.0",
     "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {

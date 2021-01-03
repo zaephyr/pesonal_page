@@ -34,7 +34,10 @@
                     class="portfolio-card__side portfolio-card__side--back"
                     :style="app.cssGradient"
                 >
-                    <NuxtLink :to="{ path: app.slug }" class="btn text-white">
+                    <NuxtLink
+                        :to="{ path: `/projects/${app.slug}` }"
+                        class="btn text-white"
+                    >
                         <fa-icon
                             :icon="['fas', 'info-circle']"
                             class="text-2xl"
@@ -55,14 +58,11 @@
                 </div>
             </div>
         </div>
-        <FplApp v-if="moreInfo == 'FPL app'" />
     </div>
 </template>
 
 <script>
-import FplApp from './Portfolio/FplApp.vue'
 export default {
-    components: { FplApp },
     data() {
         let fpl = {
             color: { primary: '#38003c', secondary: '#00ff85' },
@@ -76,7 +76,7 @@ export default {
             portfolio: {
                 fpl: {
                     title: 'FPL app',
-                    slug: '/fpl_app',
+                    slug: 'fpl_app',
                     linkLive: 'https://immense-woodland-89360.herokuapp.com/',
                     linkGitHub: 'https://github.com/zaephyr/fpl_app',
                     description:
@@ -90,6 +90,7 @@ export default {
                 },
                 seeFi: {
                     title: 'See-Fi',
+                    slug: 'see_fi',
                     linkLive: 'https://zaephyr.github.io/wheres-waldo/',
                     linkGitHub: 'https://github.com/zaephyr/wheres-waldo',
                     description:

@@ -1,3 +1,4 @@
+const path = require('path')
 export default {
     // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
     ssr: false,
@@ -21,6 +22,10 @@ export default {
 
     // Global CSS (https://go.nuxtjs.dev/config-css)
     css: ['~/assets/main.scss'],
+
+    pageTransition: {
+        name: 'page',
+    },
 
     layoutTransition: {
         name: 'slide_right',
@@ -61,8 +66,21 @@ export default {
     ],
 
     // Content module configuration (https://go.nuxtjs.dev/config-content)
-    content: {},
+    content: {
+        markdown: {
+            prism: {
+                theme: 'prism-themes/themes/prism-material-oceanic.css',
+            },
+        },
 
-    // Build Configuration (https://go.nuxtjs.dev/config-build)
-    build: {},
+        // Build Configuration (https://go.nuxtjs.dev/config-build)
+        build: {
+            extend(config, { isDev, isClient }) {
+                config.module.rules.push({
+                    test: /\.md$/i,
+                    loader: 'ignore-loader',
+                })
+            },
+        },
+    },
 }
