@@ -1,4 +1,4 @@
-const path = require('path')
+import Mode from 'frontmatter-markdown-loader/mode'
 export default {
     // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
     ssr: false,
@@ -75,10 +75,13 @@ export default {
 
         // Build Configuration (https://go.nuxtjs.dev/config-build)
         build: {
-            extend(config, { isDev, isClient }) {
+            extend(config, ctx) {
                 config.module.rules.push({
-                    test: /\.md$/i,
-                    loader: 'ignore-loader',
+                    test: /\.md$/,
+                    loader: 'frontmatter-markdown-loader',
+                    options: {
+                        mode: [Mode.VUE_COMPONENT],
+                    },
                 })
             },
         },

@@ -1,11 +1,9 @@
 ---
 title: FPL App
 description: app gets data from official Fantasy Premier League API
-img: first-blog-post.jpg
-alt: FPL image
 ---
 
-<div class="bg-beige bg-opacity-40 px-10 py-1 rounded-lg text-sm mx-auto w-2/3 mt-4">
+<div class="bg-beige bg-opacity-40 px-10 py-1 rounded-lg text-sm mx-auto w-2/3 mt-16">
 
 #### _tl:dr_
  _I have made a test account for quick lookup of an app._
@@ -44,6 +42,13 @@ On this endpoint you can get picks from certain FPL manager for certain gameweek
 
 FPL league's standings and it's overall info are avaible on this endpoint. Replace `{league-id}` with specific league's ID. For example, use an ID of one of the feirciest leagues - #Elite64 - `21004`.
 
+## Built with
+* [Nuxt.js](https://nuxtjs.org/)
+* [Vue.js](https://vuejs.org/)
+* [Vuex](https://vuex.vuejs.org/)
+* [TailwindCSS](https://tailwindcss.com/)
+* [Firebase](https://firebase.google.com/)
+
 ## Usage
 
 On left-side there's a menu. `Add username` where you can choose your username, it's required to join Free Hit League.
@@ -51,12 +56,7 @@ On left-side there's a menu. `Add username` where you can choose your username, 
 
 
 ### FPL standings
-Choosing FPL league will rander said league standings
-
-
-`` <v-img src="fpl_standings.png" alt="fpl_standings">``
-
-
+Choosing FPL league will rander said league standings.
 
 * Player: FPL manager username
 * GW points: registered points in current gameweek so far. API updates this around midnight.
@@ -65,10 +65,7 @@ Choosing FPL league will rander said league standings
 * Captain: footballer chooses as captain by FPL managers. Captain provides double the points.
 
 ### FPL ownership
-Selecting ownership tab will rander player ownership throughout said league
-
-`<v-img src="fpl_ownership.png" alt="fpl_ownership">`
-
+Selecting ownership tab will rander player ownership throughout said league.
 
 * Name: footballers name
 * Owned: percentage of teams that own said footballer
@@ -78,12 +75,7 @@ Selecting ownership tab will rander player ownership throughout said league
 ### Free Hit League
 Standings tab is the same as in FPL league. In `Pick a Team` tab you can pick a team of eleven player with a total maximum cost of 83 that you think will do best in next gameweek.
 
-`<v-img src="pick-a-team.gif" alt="pick-a-team">`
+<vue-image src="/portfolio_images/pick-a-team.gif" alt="pick-a-team">
 
 
-## Built with
-* [Nuxt.js](https://nuxtjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Vuex](https://vuex.vuejs.org/)
-* [TailwindCSS](https://tailwindcss.com/)
-* [Firebase](https://firebase.google.com/)
+

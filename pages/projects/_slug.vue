@@ -3,7 +3,7 @@
         <prev-next :prev="prev" :next="next" />
         <nuxt-content
             :document="project"
-            class="prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto"
+            class="prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto mt-16"
         />
     </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-    <img :src="imgSrc()" :alt="alt" />
+    <img :src="require(`~/assets${this.src}`)" :alt="alt" />
 </template>
 
 <script>
@@ -17,8 +17,9 @@ export default {
     methods: {
         imgSrc() {
             try {
-                return require(`${this.src}`)
+                return require(`~/assets${this.src}`)
             } catch (error) {
+                console.log(error)
                 return null
             }
         },
