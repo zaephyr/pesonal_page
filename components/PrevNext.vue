@@ -1,22 +1,28 @@
 <template>
-    <div class="flex justify-evenly">
+    <div class="flex justify-evenly md:text-xl xl:text-2xl">
         <NuxtLink
             v-if="prev"
             :to="{ name: 'projects-slug', params: { slug: prev.slug } }"
-            class="text-primary font-bold hover:underline"
+            class="font-bold hover:underline"
         >
-            {{ prev.title }}
+            <fa-icon :icon="['fas', 'angle-double-left']" />
+
+            <span :style="{ color: prev.color }"> {{ prev.title }}</span>
         </NuxtLink>
         <span v-else>&nbsp;</span>
-        <NuxtLink to="/#portfolio" class="btn text-primary-dark">
-            <fa-icon :icon="['fas', 'home']" class="text-2xl" />
+        <NuxtLink
+            to="/#portfolio"
+            class="text-primary-dark text-2xl md:text-3xl md:border-b-2 hover:scale-110 border-primary-dark"
+        >
+            <fa-icon :icon="['fas', 'home']" />
         </NuxtLink>
         <NuxtLink
             v-if="next"
             :to="{ name: 'projects-slug', params: { slug: next.slug } }"
             class="font-bold hover:underline"
         >
-            {{ next.title }}
+            <span :style="{ color: next.color }">{{ next.title }}</span>
+            <fa-icon :icon="['fas', 'angle-double-right']" />
         </NuxtLink>
         <span v-else>&nbsp;</span>
     </div>

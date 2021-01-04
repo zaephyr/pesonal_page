@@ -104,8 +104,18 @@ export default {
                         backgroundImage: `linear-gradient(to right bottom, ${seeFi.color.primary}, ${seeFi.color.secondary})`,
                     },
                 },
-                mokBlog: {},
-                nekiDruzga: {},
+                mokBlog: {
+                    title: 'mok blog',
+                    slug: 'mok_blog',
+                    linkLive: 'https://immense-woodland-89360.herokuapp.com/',
+                    linkGitHub: 'https://github.com/zaephyr/fpl_app',
+                },
+                nekiDruzga: {
+                    title: 'neki druzga',
+                    slug: 'neki_druzga',
+                    linkLive: 'https://immense-woodland-89360.herokuapp.com/',
+                    linkGitHub: 'https://github.com/zaephyr/fpl_app',
+                },
             },
             moreInfo: '',
         }
@@ -114,7 +124,7 @@ export default {
 </script>
 
 <style lang="scss">
-$color-primary-dark: #1e3799;
+$color-primary-dark: #0a3d62;
 $color-primary-light: #82ccdd;
 $color-beige: #f8c291;
 $color-black: #000;

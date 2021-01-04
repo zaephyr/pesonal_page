@@ -6,7 +6,7 @@ module.exports = {
             colors: {
                 beige: '#f8c291',
                 primary: {
-                    dark: '#1e3799',
+                    dark: '#0a3d62',
                     hover: '#6a89cc',
                     light: '#82ccdd',
                 },

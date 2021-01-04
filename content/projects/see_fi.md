@@ -1,6 +1,9 @@
 ---
 title: See-fi
 description: Where's Waldo type game
+live: https://zaephyr.github.io/wheres-waldo/
+github: https://github.com/zaephyr/wheres-waldo/
+color: purple
 ---
 
 ## Introduction

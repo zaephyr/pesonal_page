@@ -62,10 +62,27 @@ export default {
         '@nuxtjs/pwa',
         // https://go.nuxtjs.dev/content
         '@nuxt/content',
+        ['@nuxtjs/axios', { baseURL: '/' }],
         ['vue-scrollto/nuxt', { duration: 600, easing: 'ease-out' }],
+        '@nuxtjs/cloudinary',
     ],
 
     // Content module configuration (https://go.nuxtjs.dev/config-content)
+
+    env: {
+        mailGun_api: process.env.MAILGUN_API,
+        mailGun_url: process.env.MAILGUN_BASE_URL,
+        mailGun_domain: process.env.MAILGUN_DOMAIN,
+        myEmail: process.env.MY_EMAIL,
+    },
+
+    cloudinary: {
+        cloudName: process.env.CLOUDNAME,
+        apiKey: process.env.API_KEY,
+        apiSecret: process.env.API_SECRET,
+        useComponent: true,
+    },
+
     content: {
         markdown: {
             prism: {

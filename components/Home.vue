@@ -2,7 +2,7 @@
     <div id="home" class="h-screen bg-primary-light bg-img flex justify-center">
         <div class="my-auto">
             <h1 class="text-center font-bold text-6xl">
-                <span class="text-primary-light">Uroš</span>
+                <span class="text-primary-dark">Uroš</span>
                 <span class="text-gray-200">Mahne</span>
             </h1>
             <p class="text-gray-100">I'm Developer</p>
