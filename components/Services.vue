@@ -14,7 +14,7 @@
                     class="text-5xl text-icon-html"
                 />
             </div>
-            <div class="p-6 mx-auto">
+            <div class="card-text">
                 I use HTML and CSS to build attractive and responsive frontends
                 for websites.
             </div>
@@ -30,7 +30,7 @@
                     class="text-5xl text-icon-vue"
                 />
             </div>
-            <div class="p-6 mx-auto">
+            <div class="card-text">
                 When a site needs to be more dynamic i like to use JavaScript
                 and it's framework Vue.js.
             </div>
@@ -39,7 +39,7 @@
             <div class="mt-3 mx-auto">
                 <img src="~/assets/node-js.svg" alt="node" class="w-20" />
             </div>
-            <div class="p-6 mx-auto">
+            <div class="card-text">
                 For backend i have some experience with Node.js and its
                 framework Express.js
             </div>
@@ -53,6 +53,10 @@ export default {}
 
 <style>
 .service-card {
-    @apply bg-white h-60 w-52 shadow-xl m-6 rounded-xl flex flex-col transition-all duration-300;
+    @apply bg-white h-72 w-56 shadow-xl m-6 rounded-xl flex flex-col transition-all duration-300;
+}
+
+.card-text {
+    @apply p-6 mx-auto text-primary-dark font-semibold opacity-70;
 }
 </style>

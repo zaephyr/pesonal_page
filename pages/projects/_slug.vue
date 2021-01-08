@@ -2,7 +2,12 @@
     <div class="text-gray-700 mt-8">
         <prev-next :prev="prev" :next="next" />
         <div class="flex justify-around mt-8 lg:w-1/2 lg:mx-auto">
-            <a class="view" :href="project.live" target="_blank">
+            <a
+                v-if="project.title != 'Portfolio website'"
+                class="view"
+                :href="project.live"
+                target="_blank"
+            >
                 <fa-icon
                     :icon="['fas', 'external-link-alt']"
                     class="text-3xl"
@@ -20,7 +25,7 @@
         </h1>
         <nuxt-content
             :document="project"
-            class="prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto my-16"
+            class="prose prose-sm sm:prose lg:prose-lg xl:prose-xl mx-auto my-16 px-4"
         />
     </div>
 </template>
@@ -49,6 +54,18 @@ export default {
 .nuxt-content {
     img {
         @apply mx-auto;
+    }
+
+    a {
+        @apply text-primary-light;
+    }
+
+    blockquote {
+        @apply border-gray-300 bg-gray-100 py-1;
+    }
+
+    code {
+        @apply text-primary-hover;
     }
 }
 </style>

@@ -12,7 +12,7 @@
         <span v-else>&nbsp;</span>
         <NuxtLink
             to="/#portfolio"
-            class="text-primary-dark text-2xl md:text-3xl md:border-b-2 hover:scale-110 border-primary-dark"
+            class="text-primary-dark text-2xl md:text-3xl md:border-b-2 border-primary-dark absolute"
         >
             <fa-icon :icon="['fas', 'home']" />
         </NuxtLink>

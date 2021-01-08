@@ -89,13 +89,15 @@
                 >
             </div>
 
-            <button
-                class="mx-auto mt-4 btn"
+            <div></div>
+            <ButtonBubble
+                class="mx-auto mt-4"
                 :disabled="submitStatus === 'PENDING'"
+                :text="'Submit'"
                 type="submit"
-            >
-                Submit
-            </button>
+                @click.native="submitForm"
+            />
+
             <p
                 v-if="submitStatus === 'ERROR'"
                 class="text-2xl mx-auto text-red-400"
@@ -119,8 +121,10 @@
 <script>
 import { validationMixin } from 'vuelidate/src/index'
 import { email, minLength, required } from 'vuelidate/src/validators'
+import ButtonBubble from './ButtonBubble.vue'
 
 export default {
+    components: { ButtonBubble },
     mixins: [validationMixin],
     data() {
         return {
@@ -171,6 +175,7 @@ export default {
             this.$v.$touch()
             if (this.$v.$invalid) {
                 this.submitStatus = 'ERROR'
+                this.error = this.$v.error
             } else {
                 try {
                     await this.$axios.$post(

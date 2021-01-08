@@ -16,6 +16,8 @@ module.exports = {
                     js: '#f0db4f',
                     vue: '#42b883',
                     node: '#3c873a',
+                    linkedIn: '#0e76a8',
+                    gitHub: '#211F1F',
                 },
             },
         },

@@ -1,15 +1,17 @@
 <template>
-    <div class="h-screen md:px-8 lg:px-16 xl:px-32" id="about">
-        <div class="h-1/5 p-8 text-gray-600 md:px-4 lg:px-8">
+    <div class="h-screen flex flex-col" id="about">
+        <div class="text-gray-600 p-8 md:p-16 lg:px-28">
             <h1>About Me</h1>
             <p>get to know me</p>
         </div>
-        <div class="h-4/5 flex px-8 md:px-2 lg:px-8">
-            <div class="hidden md:block">
+        <div
+            class="flex flex-col flex-1 md:flex-row content-center items-center my-auto px-8 md:px-2 lg:px-8 xl:px-24"
+        >
+            <div class="block">
                 <img
                     src="~/assets/profilePic.jpg"
                     alt="profilePic"
-                    class="mirror"
+                    class="mirror w-2/3 md:w-auto object-cover"
                 />
             </div>
 
@@ -19,15 +21,14 @@
                     <h2 class="text-xl font-bold">
                         I am Uroš Mahne, a Web Developer
                     </h2>
-                    <p class="mt-4">
-                        I am a freelancer based in Slovenia and I have been
-                        building web apps for around a year. Lorem ipsum dolor
-                        sit amet consectetur adipisicing elit. Optio enim nisi
-                        laboriosam unde libero, rerum quaerat magni ratione modi
-                        consectetur?
+                    <p class="mt-4 lg:pb-6">
+                        Ex online poker player of twelve years dipping its toes
+                        into web development. I have been building web apps with
+                        newsest technologies for around a year. Looking for new
+                        challenges and problems to solve.
                     </p>
                 </div>
-                <div class="pt-6">
+                <div class="pt-6 lg:pt-12">
                     <div class="flex">
                         <div class="w-1/2">
                             <span class="font-bold">Name:</span> Uroš Mahne
@@ -37,7 +38,7 @@
                             uros.mahne@gmail.com
                         </div>
                     </div>
-                    <div class="flex">
+                    <div class="flex lg:pb-8">
                         <div class="w-1/2">
                             <span class="font-bold">Age:</span> {{ age }}
                         </div>
@@ -46,11 +47,38 @@
                             Ljubljana, SI
                         </div>
                     </div>
-                    <div class="mt-10 flex justify-evenly">
-                        <button class="btn">Download CV</button>
-                        <button class="btn" v-scroll-to="'#portfolio'">
-                            My Work
-                        </button>
+                    <div class="mt-10 flex justify-evenly h-20">
+                        <div>
+                            <ButtonBubble
+                                :text="'Download CV'"
+                                :class="{ 'bg-primary-light': btnActive }"
+                                @click.native="toggleBtn()"
+                            />
+                            <transition name="tab-fade">
+                                <div
+                                    v-if="btnActive"
+                                    class="flex justify-around font-bold text-primary-dark"
+                                >
+                                    <a
+                                        href="/Uros_Mahne-europass.pdf"
+                                        download=""
+                                        class="lang-tab"
+                                        >EN</a
+                                    >
+                                    <a
+                                        href="/Uros_Mahne-CV.pdf"
+                                        download=""
+                                        class="lang-tab"
+                                        >SI</a
+                                    >
+                                </div>
+                            </transition>
+                        </div>
+
+                        <ButtonBubble
+                            :text="'My Work'"
+                            v-scroll-to="'#portfolio'"
+                        />
                     </div>
                 </div>
             </div>
@@ -63,16 +91,43 @@ export default {
     data() {
         return {
             born: 1984,
+            btnActive: false,
         }
     },
     computed: {
         age() {
             let dt = new Date()
             let year = dt.getFullYear()
-            return year - this.born
+            const month = dt.getMonth()
+            if (month < 5) {
+                return year - this.born - 1
+            } else {
+                return year - this.born
+            }
+        },
+    },
+    methods: {
+        toggleBtn() {
+            this.btnActive = !this.btnActive
         },
     },
 }
 </script>
 
-<style></style>
+<style>
+.lang-tab {
+    @apply border-b-2 border-primary-light px-3 pt-4 hover:bg-primary-light hover:bg-opacity-20  cursor-pointer duration-500;
+}
+
+.tab-fade-enter-active {
+    transition: all 0.3s ease;
+}
+.tab-fade-leave-active {
+    transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.tab-fade-enter, .tab-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+    transform: translateY(-20px);
+    opacity: 0;
+}
+</style>

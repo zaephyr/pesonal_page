@@ -1,5 +1,9 @@
 # personal_page
 
+Simple personal page for showcasing my portfolio
+
+
+
 ## Build Setup
 
 ```bash

@@ -1,7 +1,18 @@
 <template>
     <div id="portfolio" class="min-h-screen flex flex-col">
         <div class="text-gray-600 p-8 lg:px-28">
-            <h1 class="pb-4">Portfolio</h1>
+            <a
+                href="https://github.com/zaephyr"
+                target="_blank"
+                class="flex mb-4"
+            >
+                <h1>Portfolio</h1>
+                <fa-icon
+                    :icon="['fab', 'github']"
+                    class="text-3xl text-icon-gitHub my-auto ml-4"
+                />
+            </a>
+
             <p>Showcasing some of my best work</p>
         </div>
         <div class="flex flex-wrap justify-evenly mb-8 flex-grow items-center">
@@ -104,20 +115,7 @@ export default {
                         backgroundImage: `linear-gradient(to right bottom, ${seeFi.color.primary}, ${seeFi.color.secondary})`,
                     },
                 },
-                mokBlog: {
-                    title: 'mok blog',
-                    slug: 'mok_blog',
-                    linkLive: 'https://immense-woodland-89360.herokuapp.com/',
-                    linkGitHub: 'https://github.com/zaephyr/fpl_app',
-                },
-                nekiDruzga: {
-                    title: 'neki druzga',
-                    slug: 'neki_druzga',
-                    linkLive: 'https://immense-woodland-89360.herokuapp.com/',
-                    linkGitHub: 'https://github.com/zaephyr/fpl_app',
-                },
             },
-            moreInfo: '',
         }
     },
 }

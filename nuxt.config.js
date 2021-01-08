@@ -65,6 +65,7 @@ export default {
         ['@nuxtjs/axios', { baseURL: '/' }],
         ['vue-scrollto/nuxt', { duration: 600, easing: 'ease-out' }],
         '@nuxtjs/cloudinary',
+        'nuxt-clipboard',
     ],
 
     // Content module configuration (https://go.nuxtjs.dev/config-content)
@@ -102,5 +103,9 @@ export default {
                 })
             },
         },
+    },
+
+    clipboard: {
+        autoSetContainer: true,
     },
 }

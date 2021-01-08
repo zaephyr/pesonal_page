@@ -22,8 +22,11 @@
     "mailgun-js": "^0.22.0",
     "netlify-lambda": "^2.0.2",
     "nuxt": "^2.14.6",
+    "nuxt-clipboard": "0.0.2",
     "prism-themes": "^1.5.0",
+    "v-clipboard": "^2.2.3",
     "vue-scrollto": "^2.20.0",
+    "vue-typed-js": "^0.1.2",
     "vuelidate": "^0.7.6",
     "xss-filters": "^1.2.7"
   },

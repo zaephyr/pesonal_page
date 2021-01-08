@@ -1,7 +1,7 @@
 <template>
     <div
         id="cta"
-        class="h-40 bg-primary-light flex justify-between py-8 lg:px-16 px-8"
+        class="h-40 bg-primary-light flex justify-between py-4 sm:py-8 lg:px-16 px-8"
     >
         <div class="text-primary-dark">
             <h1 class="pb-4">Let's work together!</h1>
@@ -11,7 +11,7 @@
             </p>
         </div>
         <button
-            class="h-12 px-5 ring-4 rounded-3xl bg-beige ring-offset-2 ring-beige ring-offset-primary-light my-auto text-primary-dark font-bold"
+            class="btn-beige ring-offset-primary-light"
             v-scroll-to="'#contact'"
         >
             Hire me

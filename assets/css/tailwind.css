@@ -7,7 +7,7 @@ h1 {
 }
 
 .li-menu > li {
-    @apply mt-3 font-bold text-center text-primary-dark opacity-90;
+    @apply mt-3 font-bold text-center  opacity-90;
 }
 
 .li-menu > li:hover,
@@ -16,5 +16,13 @@ h1 {
 }
 
 .btn {
-    @apply p-4 rounded-xl ring ring-primary-light;
+    @apply p-4 rounded-xl ring ring-primary-light   font-bold hover:bg-primary-light hover:text-primary-dark duration-500;
+}
+
+.btn-beige {
+    @apply h-12 px-5 ring-4 rounded-3xl bg-beige ring-offset-2 ring-beige  my-auto text-primary-dark font-bold transition-all duration-500;
+}
+
+.btn-beige:hover {
+    @apply ring-offset-transparent;
 }
