@@ -83,6 +83,9 @@ export default {
             color: { primary: '#000', secondary: '#cc8ef6' },
             img: '@/assets/seeFi.jpg',
         }
+        let mockupBlog = {
+            color: { primary: '#059669', secondary: '#A7F3D0' },
+        }
         return {
             portfolio: {
                 fpl: {
@@ -113,6 +116,20 @@ export default {
                     },
                     cssGradient: {
                         backgroundImage: `linear-gradient(to right bottom, ${seeFi.color.primary}, ${seeFi.color.secondary})`,
+                    },
+                },
+                mockupBlog: {
+                    title: 'Mockup Blog',
+                    slug: 'mock_blog',
+                    linkLive: 'http://wooden-self.surge.sh/',
+                    linkGitHub: 'https://github.com/zaephyr/blog-nuxt',
+                    description:
+                        'Frontend blog page made with Nuxt.js that connects to blog-api made with Node.js/Express.js ',
+                    cssImg: {
+                        backgroundImage: ` linear-gradient(to right bottom, ${mockupBlog.color.primary}, ${mockupBlog.color.secondary})`,
+                    },
+                    cssGradient: {
+                        backgroundImage: `linear-gradient(to right bottom, ${mockupBlog.color.primary}, ${mockupBlog.color.secondary})`,
                     },
                 },
             },

@@ -6,7 +6,7 @@ github: https://github.com/zaephyr/fpl_app/
 color: green
 ---
 
-<div class="bg-beige bg-opacity-40 px-10 py-1 rounded-lg text-sm mx-auto w-4/5  md:w-2/3">
+<div class="tldr">
 
 #### _tl:dr_
  _I have made a test account for quick lookup of an app._

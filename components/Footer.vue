@@ -23,12 +23,12 @@
         </div>
         <div class="flex justify-between mx-16 mb-2">
             <div class="flex">
-                <div>
+                <a href="www.linkedin.com/in/uros-mahne-899677203">
                     <fa-icon
                         :icon="['fab', 'linkedin']"
                         class="text-3xl text-icon-linkedIn mx-2"
                     />
-                </div>
+                </a>
                 <a href="https://github.com/zaephyr" target="_blank">
                     <fa-icon
                         :icon="['fab', 'github']"

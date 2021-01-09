@@ -26,3 +26,7 @@ h1 {
 .btn-beige:hover {
     @apply ring-offset-transparent;
 }
+
+.tldr {
+    @apply bg-beige bg-opacity-40 px-10 py-1 rounded-lg text-sm mx-auto w-4/5  md:w-2/3;
+}
