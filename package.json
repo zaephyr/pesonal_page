@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "NODE_ENV=development nuxt & yarn functions:serve",
+    "dev": "NODE_ENV=development nuxt & npm run functions:serve",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "NODE_ENV=production nuxt generate && yarn functions:build",
+    "generate": "NODE_ENV=production nuxt generate && npm run functions:build",
     "functions:serve": "netlify-lambda serve functions",
     "functions:build": "netlify-lambda build functions"
   },
