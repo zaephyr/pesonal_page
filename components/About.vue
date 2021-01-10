@@ -1,5 +1,5 @@
 <template>
-    <div class="h-screen flex flex-col" id="about">
+    <div class="min-h-screen flex flex-col" id="about">
         <div class="text-gray-600 p-8 md:p-16 lg:px-28">
             <h1>About Me</h1>
             <p>get to know me</p>
@@ -47,7 +47,7 @@
                             Ljubljana, SI
                         </div>
                     </div>
-                    <div class="mt-10 flex justify-evenly h-20">
+                    <div class="my-10 flex justify-evenly h-20">
                         <div>
                             <ButtonBubble
                                 :text="'Download CV'"
